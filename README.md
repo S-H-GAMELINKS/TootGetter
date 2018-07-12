@@ -1,24 +1,17 @@
-# README
+# TootGetter
+## 概要
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+MastodonのTootを纏められるRailsアプリです。
 
-Things you may want to cover:
+## 使い方
 
-* Ruby version
+Tootの埋め込みURLをコピーして、張り付けるだけでまとめを作ることができます。
 
-* System dependencies
+## デプロイ
 
-* Configuration
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-* Database creation
+上記のボタンからHerokuへとデプロイできます。
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## ライセンス
+[MITライセンス](./LISENCE)です。

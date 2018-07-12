@@ -30,5 +30,8 @@
 
 <br>
 
-<%= link_to 'New Topic', new_topic_path %>
-<%= link_to 'Login For Mastodon', user_mastodon_omniauth_authorize_path %>
+<% if user_signed_in? %>
+  <%= link_to 'New Topic', new_topic_path %>
+<% else %>
+  <%= link_to 'Login For Mastodon', user_mastodon_omniauth_authorize_path %>
+<% end %>

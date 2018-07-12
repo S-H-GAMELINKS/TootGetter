@@ -1,0 +1,10 @@
+{
+  "name": "TootGetter",
+  "description": "MasotodonのTootを纏められるRailsアプリ",
+  "repository": "https://github.com/S-H-GAMELINKS/TootGetter",
+  "env": {
+    "DEVISE_KEY": "",
+    "ACCESS_KEY": "",
+    "SECRET_KEY": ""
+  }
+}

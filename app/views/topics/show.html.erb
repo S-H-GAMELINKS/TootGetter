@@ -23,4 +23,6 @@
     <%= render @topic.toots %>
   </div>
 
+<% if current_user.id == @topic.user_id %>
   <%= render 'toots/new', topic: @topic %>
+<% end %>

@@ -1,5 +1,6 @@
 class TootsController < ApplicationController
     before_action :set_topic
+    protect_from_forgery :except => [:create]
 
     def create
         comment = @topic.toots.create! toots_params

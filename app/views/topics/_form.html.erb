@@ -21,6 +21,11 @@
     <%= form.text_area :about %>
   </div>
 
+  <div class="field">
+    <%= form.label :private %>
+    <%= form.check_box :private, {}, true, false  %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

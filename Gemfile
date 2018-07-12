@@ -33,6 +33,12 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+gem 'devise'
+
+gem 'mastodon-api', require: 'mastodon'
+gem 'omniauth-mastodon'
+gem 'omniauth'
+
 group :production do
   gem 'pg', '~> 0.20'
 end

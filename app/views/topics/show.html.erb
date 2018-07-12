@@ -14,8 +14,9 @@
   <strong>User:</strong>
   <%= User.find(@topic.user_id).uid %>
 </p>
-
-<%= link_to 'Edit', edit_topic_path(@topic) %> |
+<% if if user_signed_in? && current_user.id == @topic.user_id %>
+  <%= link_to 'Edit', edit_topic_path(@topic) %> |
+<% end %>
 <%= link_to 'Back', topics_path %>
 
 <h2>Toots</h2>
@@ -23,6 +24,6 @@
     <%= render @topic.toots %>
   </div>
 
-<% if current_user.id == @topic.user_id %>
+<% if if user_signed_in? && current_user.id == @topic.user_id %>
   <%= render 'toots/new', topic: @topic %>
 <% end %>

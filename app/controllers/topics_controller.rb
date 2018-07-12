@@ -4,7 +4,12 @@ class TopicsController < ApplicationController
   # GET /topics
   # GET /topics.json
   def index
-    @topics = Topic.all
+    if !(user_signed_in?) then
+      @topics = Topic.all.where(:private => false)
+    else
+      @topics = Topic.all.where(:private => true, :user_id => current_user.id)
+      @topics += @topics = Topic.all.where(:private => false)
+    end
   end
 
   # GET /topics/1

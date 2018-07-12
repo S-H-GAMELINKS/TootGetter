@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_12_060032) do
+ActiveRecord::Schema.define(version: 2018_07_12_083135) do
 
   create_table "mastodon_clients", force: :cascade do |t|
     t.string "domain"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2018_07_12_060032) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "private", default: false, null: false
   end
 
   create_table "users", force: :cascade do |t|

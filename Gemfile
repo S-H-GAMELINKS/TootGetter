@@ -42,6 +42,9 @@ gem 'omniauth'
 # Using ENV
 gem 'dotenv-rails'
 
+# Using Jquery
+gem 'jquery-rails'
+
 group :production do
   gem 'pg', '~> 0.20'
 end

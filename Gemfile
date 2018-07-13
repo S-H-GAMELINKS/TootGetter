@@ -45,6 +45,9 @@ gem 'dotenv-rails'
 # Using Jquery
 gem 'jquery-rails'
 
+# Using PWA
+gem "serviceworker-rails"
+
 group :production do
   gem 'pg', '~> 0.20'
 end

@@ -1,6 +1,5 @@
 class TootsController < ApplicationController
     before_action :set_topic
-    protect_from_forgery :except => [:create] # TODO CSRF対策をオフにしているだけなので対応策を考える
 
     def create
         comment = @topic.toots.create! toots_params

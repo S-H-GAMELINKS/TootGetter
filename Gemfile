@@ -48,6 +48,9 @@ gem 'jquery-rails'
 # Using PWA
 gem "serviceworker-rails"
 
+# Using Webpacker
+gem 'webpacker'
+
 group :production do
   gem 'pg', '~> 0.20'
 end

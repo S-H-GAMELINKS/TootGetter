@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+
 <h1>Topics</h1>
 
 <table>
@@ -18,10 +19,10 @@
         <td><%= topic.title %></td>
         <td><%= topic.about %></td>
         <td><%= User.find(topic.user_id).uid %></td>
-        <td><%= link_to 'Show', topic, class: 'btn btn-default' %></td>
+        <td><%= button_tag(link_to 'Show', topic, class: 'btn-light') %></td>
         <% if user_signed_in? && current_user.id == topic.user_id %>
-        <td><%= link_to 'Edit', edit_topic_path(topic), class: 'btn btn-default' %></td>
-        <td><%= button_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_tag(link_to 'Edit', edit_topic_path(topic), class: 'btn-light') %></td>
+        <td><%= button_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-light' %></td>
         <% end %>
       </tr>
     <% end %>
@@ -30,8 +31,10 @@
 
 <br>
 
+<p class="text-center">
 <% if user_signed_in? %>
-  <%= link_to 'New Topic', new_topic_path %>
+  <%= button_tag(link_to 'New Topic', new_topic_path, class: 'btn-light') %>
 <% else %>
-  <%= link_to 'Login For Mastodon', user_mastodon_omniauth_authorize_path %>
+  <%= button_tag(link_to 'Login For Mastodon', user_mastodon_omniauth_authorize_path, class: 'btn-light') %>
 <% end %>
+</p>

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'pages/about'
+  get 'pages/contact'
+  get 'pages/link'
   root 'topics#index'
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   resources :topics do

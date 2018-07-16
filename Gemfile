@@ -53,6 +53,7 @@ gem 'webpacker'
 
 # Using Kaminari
 gem 'kaminari'
+gem 'kaminari-bootstrap'
 
 group :production do
   gem 'pg', '~> 0.20'

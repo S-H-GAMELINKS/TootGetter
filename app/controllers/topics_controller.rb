@@ -1,14 +1,17 @@
 class TopicsController < ApplicationController
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
+  PER = 10
+
   # GET /topics
   # GET /topics.json
   def index
     if !(user_signed_in?) then
-      @topics = Topic.all.where(:private => false)
+      @topics = Topic.all.where(:private => false).page(params[:page]).per(PER)
     else
-      @topics = Topic.all.where(:private => true, :user_id => current_user.id)
-      @topics += @topics = Topic.all.where(:private => false)
+      @private = Topic.all.where(:private => true, :user_id => current_user.id).page(params[:page]).per(PER)
+      @public = Topic.all.where(:private => false).page(params[:page]).per(PER)
+      @topics = @private.or(@public)
     end
   end
 

@@ -51,6 +51,9 @@ gem "serviceworker-rails"
 # Using Webpacker
 gem 'webpacker'
 
+# Using Kaminari
+gem 'kaminari'
+
 group :production do
   gem 'pg', '~> 0.20'
 end

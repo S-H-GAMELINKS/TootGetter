@@ -1,0 +1,32 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="./">
+        TootGetter
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Menu
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to "Home", root_path, class: "dropdown-item" %>
+              <% if user_signed_in? %>
+                <%= link_to "New Topic", new_topic_path, class: "dropdown-item" %>
+                <%= link_to "Log Out", destroy_user_session_path, class: "dropdown-item", method: :delete %>
+              <% else %>
+                <%= link_to 'Login For Mastodon', user_mastodon_omniauth_authorize_path, class: "dropdown-item" %>
+              <% end %>
+              <%= link_to "Source Code", "https://github.com/S-H-GAMELINKS/TootGetter", class: "dropdown-item" %>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

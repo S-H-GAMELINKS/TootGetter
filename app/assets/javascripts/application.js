@@ -15,5 +15,6 @@
 //= require turbolinks
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-umi/dist/js/bootstrap
 //= require_tree .
 //= require serviceworker-companion

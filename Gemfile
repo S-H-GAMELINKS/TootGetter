@@ -56,7 +56,7 @@ gem 'kaminari'
 gem 'kaminari-bootstrap'
 
 # Using ActiveAdmin
-gem 'activeadmin'
+gem 'activeadmin', github: 'gregbell/active_admin'
 
 group :production do
   gem 'pg', '~> 0.20'

@@ -1,0 +1,24 @@
+p#notice
+  = notice
+p
+  strong
+    | Title:
+  = @topic.title
+p
+  strong
+    | About:
+  = @topic.about
+p
+  strong
+    | User:
+  = User.find(@topic.user_id).uid
+- if user_signed_in? && current_user.id == @topic.user_id
+  = link_to 'Edit', edit_topic_path(@topic)
+  |  | 
+= link_to 'Back', topics_path
+h2
+  | Toots
+#toots
+  = render @topic.toots
+- if user_signed_in? && current_user.id == @topic.user_id
+  = render 'toots/new', topic: @topic

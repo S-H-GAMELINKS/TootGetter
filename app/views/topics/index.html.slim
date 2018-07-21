@@ -1,0 +1,9 @@
+p#notice
+= notice
+= render 'topics/new_topic'
+br
+p.text-center
+  - if user_signed_in?
+    = button_tag(link_to 'New Topic', new_topic_path, class: 'btn-light')
+  - else
+    = button_tag(link_to 'Login For Mastodon', user_mastodon_omniauth_authorize_path, class: 'btn-light')

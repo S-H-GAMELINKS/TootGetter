@@ -55,6 +55,9 @@ gem 'webpacker'
 gem 'kaminari'
 gem 'kaminari-bootstrap'
 
+# Using Slim
+gem 'slim-rails'
+
 group :production do
   gem 'pg', '~> 0.20'
 end

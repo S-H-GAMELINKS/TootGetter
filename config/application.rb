@@ -13,7 +13,7 @@ module Tootgetter
 
     Rails.configuration.action_controller.per_form_csrf_tokens = true
     
-    config.i18n.default_locale = :ja
+    config.i18n.default_locale = :en
 
     config.generators.template_engine = :slim  
 

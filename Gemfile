@@ -58,6 +58,9 @@ gem 'kaminari-bootstrap'
 # Using Slim
 gem 'slim-rails'
 
+# Using ActiveAdmin
+gem 'activeadmin', github: 'gregbell/active_admin'
+
 group :production do
   gem 'pg', '~> 0.20'
 end

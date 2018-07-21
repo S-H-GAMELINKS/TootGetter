@@ -1,0 +1,29 @@
+h1
+  | New Topics
+table
+  thead
+    tr
+      th
+        | Title
+      th
+        | About
+      th
+        | User
+      th[colspan="3"]
+  tbody
+    - @topics.each do |topic|
+      tr
+        td
+          = topic.title
+        td
+          = topic.about
+        td
+          = User.find(topic.user_id).uid
+        td
+          = button_tag(link_to 'Show', topic, class: 'btn-light')
+        - if user_signed_in? && current_user.id == topic.user_id
+          td
+            = button_tag(link_to 'Edit', edit_topic_path(topic), class: 'btn-light')
+          td
+            = button_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-light'
+= paginate @topics

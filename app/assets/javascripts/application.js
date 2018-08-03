@@ -16,5 +16,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-umi/dist/js/bootstrap
+//= require macy/dist/macy
 //= require_tree .
 //= require serviceworker-companion

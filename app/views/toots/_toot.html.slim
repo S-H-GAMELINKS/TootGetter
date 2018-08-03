@@ -1,2 +1,3 @@
-p
-  = sanitize "#{toot.content}", :tags => %w(iframe)
+div.p
+  .toot-container
+    = sanitize "#{toot.content}", :tags => %w(iframe)

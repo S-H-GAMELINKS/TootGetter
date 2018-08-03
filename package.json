@@ -5,6 +5,7 @@
     "@rails/webpacker": "3.5",
     "bootstrap-umi": "^4.0.0",
     "jquery": "^3.3.1",
+    "macy": "^2.3.0",
     "vue": "^2.5.16",
     "vue-loader": "14.2.2",
     "vue-template-compiler": "^2.5.16"
